@@ -1,0 +1,21 @@
+<main>
+  <div class="view">
+    <div class="container">
+        <div class ="row justify-content-center align-items-center">
+          <div class="col-md-6 text-center white-text">
+            <div class="about-content-paragraph text center">
+              <h1>Каршеринг Орион</h1>
+            </div>
+            <div class="about-content-paragraph">
+              Вы не ездили на машине уже десять тысяч лет? Тогда вы по адресу! Каршеринг Орион предоставляет машины в аренду по самым выгодным ценам! Только самые последние модели в лучших комплектциях!
+            </div>
+            <form *ngIf="!authService.isLoggedIn()" class="form-inline login-form">
+              <a class="btn btn-outline-white" routerLink="/auth/signin">Войти</a>
+              <a class="btn btn-outline-white" routerLink="/auth/signup">Регистрация</a>
+              <a class="btn btn-outline-white" href="https://oauth.vk.com/authorize?client_id=7197523&display=page&redirect_uri=http://localhost:4200/oauthSuccess&scope=friends,email&response_type=token&v=5.52">Вк</a>  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>

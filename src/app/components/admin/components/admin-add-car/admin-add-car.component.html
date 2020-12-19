@@ -1,0 +1,16 @@
+<div class="container">
+    <h2 class="text-center">Добавить автомобиль</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="model">Модель:</label>
+            <ckeditor formControlName="model" [editor]="editor" data="Модель" id="model"></ckeditor>
+        </div>
+    
+        <div class="form-group">
+            <label for="price">Цена:</label>
+            <input type="number" formControlName="price" placeholder="Цена" name="price" class="form-control" id="price">
+        </div>
+    
+        <button class="btn btn-success">Добавить</button>
+    </form>
+</div>

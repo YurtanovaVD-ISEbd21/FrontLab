@@ -1,0 +1,38 @@
+<nav>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" [routerLink]="'/home'">Главная</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" [routerLink]="'/cars'">Автомобили</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link disabled" [routerLink]="'/404'">Информация</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" [routerLink]="'/404'" tabindex="-1" aria-disabled="true">Контакты</a>
+      </li>
+      
+    <form *ngIf="authService.isLoggedIn()" class="form-inline login-form">
+        <a class="btn btn-outline-white" (click)="signOut()">Выйти</a>
+    </form>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <div class="fixed-bottom">
+    <div class="container">
+      <div class="d-flex" style="width: 100%;">
+        <div class="num-1 mr-auto">
+          Мой телефон(не настоящий):
+          <a class="footer-telephone" href="tel:+78005553535">+8 (800) 555-35-35</a>
+        </div>
+        <div class="basket">
+          <a class="footer-telephone" href="javascript:void(0);">Личный кабинет</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

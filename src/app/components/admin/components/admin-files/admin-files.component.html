@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="form-group">
+        <input type="file" class="btn btn-dark d-block ml-auto mt-3" name="image" (change)="upload($event)"/>
+    </div>
+</div>
+<div class="container" *ngFor="let fileInfo of folderInfo">
+    <hr color="black">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3>Файл: #{{fileInfo.name}}</h3>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-dark d-block ml-auto" (click)="download(fileInfo.name)">Скачать</button>
+            </div>
+        </div>
+    </div>
+</div>

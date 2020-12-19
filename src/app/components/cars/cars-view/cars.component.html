@@ -1,0 +1,36 @@
+<main>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Поиск</span>
+        </div>
+       <input [ngModel]="searchQuery" (ngModelChange)="changed($event)" >
+    </div>
+    <div class="content-menu">
+        <div class="container">
+            <div class="col-3" style="color: #000;">
+                КАТАЛОГ
+            </div>
+            <div class="col">
+                <div class="catalog-section-item-wrap">
+                    <div class="row no-gutters">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" *ngFor="let car of cars">
+                            <div class="catalog-section-item-container">
+                                <div class="catalog-section-item">
+                                    <div class="catalog-section-item-image">
+                                        <img style="height: 100%; width: 100%;" src="/assets/car.jpg" (click)="adminService.getImage(car.model)">
+                                    </div>
+                                    <div class="catalog-section-item-name mt-3">
+                                        <p>
+                                        <a href="javascript:void(0);">Модель: {{car.model}}</a>
+                                        </p>
+                                        <a>Цена: {{car.price}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

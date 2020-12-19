@@ -1,0 +1,16 @@
+<div class="container col-md-3">
+    <form class="form-signin" [formGroup]="form" (ngSubmit)="signIn()">
+      <h1 class="h3 mb-3 font-weight-normal">Вход</h1>
+      <div class="form-field">
+        <label for="name">Имя пользователя</label>
+        <input type="text" id="name" class="form-control" name="name" formControlName="name" required>
+      </div>
+  
+      <div class="form-field">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" class="form-control" name="password" formControlName="password" required>
+      </div>
+  
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+    </form>
+  </div>
